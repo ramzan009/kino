@@ -14,7 +14,7 @@ class FilmRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -29,12 +29,10 @@ class FilmRequest extends FormRequest
                 'required',
                 'string',
             ],
-
             'description' => [
                 'required',
                 'string',
             ],
-
             'date_publication' => [
                 'required',
                 'date'
@@ -44,7 +42,6 @@ class FilmRequest extends FormRequest
                 'integer',
                 Rule::exists(Country::class, 'id'),
             ],
-
             'type' => [
                 'required',
                 'integer',
