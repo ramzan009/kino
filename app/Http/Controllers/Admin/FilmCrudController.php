@@ -48,7 +48,6 @@ class FilmCrudController extends CrudController
     protected function setupListOperation(): void
     {
         CRUD::addColumns([
-
             [
                 'name'  => 'id',
                 'label' => __($this->language_model_fields . 'id')
@@ -70,19 +69,12 @@ class FilmCrudController extends CrudController
                 'label' => __($this->language_model_fields . 'type_id')
             ],
         ]);
-
-        /**
-         * Columns can be defined using the fluent syntax:
-         * - CRUD::column('price')->type('number');
-         */
     }
-
 
     protected function setupShowOperation()
     {
         $this->setupListOperation();
     }
-
 
     /**
      * Define what happens when the Create operation is loaded.
@@ -111,11 +103,6 @@ class FilmCrudController extends CrudController
                 'label' => __($this->language_model_fields . 'type_id')
             ]
         ]);
-
-        /**
-         * Fields can be defined using the fluent syntax:
-         * - CRUD::field('price')->type('number');
-         */
     }
 
     /**
