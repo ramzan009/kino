@@ -21,6 +21,9 @@ class Country extends Model
         'alias'
     ];
 
+    /**
+     * Отношения с фильмами
+      */
     public function film(): HasMany
     {
       return $this->hasMany(Film::class ,'country_id', 'id');
