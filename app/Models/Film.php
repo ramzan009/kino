@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Models\Admin;
+namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Film extends Model
@@ -38,4 +39,13 @@ class Film extends Model
     {
         return  $this->belongsTo(Type::class);
     }
+
+    /**
+     * Отношения с комментарием
+     */
+    public function comments(): HasMany
+    {
+        return $this->hasMany(Comment::class);
+    }
+
 }

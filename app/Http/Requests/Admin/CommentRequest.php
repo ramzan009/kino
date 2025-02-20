@@ -2,12 +2,9 @@
 
 namespace App\Http\Requests\Admin;
 
-use App\Models\Country;
-use App\Models\Type;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
-class FilmRequest extends FormRequest
+class CommentRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,27 +22,17 @@ class FilmRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => [
-                'required',
-                'string',
-            ],
-            'description' => [
-                'required',
-                'string',
-            ],
-            'date_publication' => [
-                'required',
-                'date'
-            ],
-            'country'       => [
+            'film'    => [
                 'required',
                 'integer',
-                Rule::exists(Country::class, 'id'),
             ],
-            'type' => [
+            'user'    => [
                 'required',
                 'integer',
-                Rule::exists(Type::class, 'id'),
+            ],
+            'comment' => [
+                'required',
+                'string',
             ]
         ];
     }
