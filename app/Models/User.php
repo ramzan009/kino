@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Models\Admin;
+namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -44,5 +45,21 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Отношения с комментария
+     */
+    public function comment(): HasMany
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    /**
+     * Отношения с рейтингом
+     */
+    public function ratings(): HasMany
+    {
+        return  $this->hasMany(Rating::class);
     }
 }

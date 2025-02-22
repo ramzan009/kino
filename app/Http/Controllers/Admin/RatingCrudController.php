@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\Admin\FilmRequest;
-use App\Models\Film;
+use App\Http\Requests\Admin\RatingRequest;
+use App\Models\Rating;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
 use Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
@@ -12,14 +12,15 @@ use Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 use Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
-class FilmCrudController extends CrudController
-{
 
+class RatingCrudController extends CrudController
+{
     use ListOperation;
     use CreateOperation;
     use UpdateOperation;
     use DeleteOperation;
     use ShowOperation;
+
 
     private string $language_model;
     private string $language_model_fields;
@@ -31,11 +32,11 @@ class FilmCrudController extends CrudController
      */
     public function setup()
     {
-        $this->language_model = 'models/Film.';
-        $this->language_model_fields = 'models/Film.fields.';
+        $this->language_model = 'models/Rating.';
+        $this->language_model_fields = 'models/Rating.fields.';
 
-        CRUD::setModel(Film::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/film');
+        CRUD::setModel(Rating::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/rating');
         CRUD::setEntityNameStrings(__($this->language_model . 'entity_name'), __($this->language_model . 'entity_plural_name'));
     }
 
@@ -53,24 +54,17 @@ class FilmCrudController extends CrudController
                 'label' => __($this->language_model_fields . 'id')
             ],
             [
-                'name'  => 'name',
-                'label' => __($this->language_model_fields . 'name')
+                'name'  => 'film',
+                'label' => __($this->language_model_fields . 'film_id')
             ],
             [
-                'name'  => 'description',
-                'label' => __($this->language_model_fields . 'description')
+                'name'  => 'user',
+                'label' => __($this->language_model_fields . 'user_id'),
+                'attribute' => 'name'
             ],
             [
-                'name'  => 'date_publication',
-                'label' => __($this->language_model_fields . 'date_publication')
-            ],
-            [
-                'name'  => 'country',
-                'label' => __($this->language_model_fields . 'country_id')
-            ],
-            [
-                'name'  => 'type',
-                'label' => __($this->language_model_fields . 'type_id')
+                'name'  => 'rating',
+                'label' => __($this->language_model_fields . 'rating')
             ],
         ]);
     }
@@ -88,28 +82,21 @@ class FilmCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(FilmRequest::class);
+        CRUD::setValidation(RatingRequest::class);
         CRUD::addFields([
             [
-                'name'  => 'name',
-                'label' => __($this->language_model_fields . 'name'),
+                'name'  => 'film',
+                'label' => __($this->language_model_fields . 'film_id'),
             ],
             [
-                'name'  => 'description',
-                'label' => __($this->language_model_fields . 'description'),
+                'name'  => 'user',
+                'label' => __($this->language_model_fields . 'user_id'),
+                'attribute' => 'name'
             ],
             [
-                'name'  => 'date_publication',
-                'label' => __($this->language_model_fields . 'date_publication')
+                'name'  => 'rating',
+                'label' => __($this->language_model_fields . 'rating'),
             ],
-            [
-                'name'  => 'country',
-                'label' => __($this->language_model_fields . 'country_id'),
-            ],
-            [
-                'name'  => 'type',
-                'label' => __($this->language_model_fields . 'type_id')
-            ]
         ]);
     }
 
@@ -123,5 +110,4 @@ class FilmCrudController extends CrudController
     {
         $this->setupCreateOperation();
     }
-
 }
