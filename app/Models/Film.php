@@ -48,4 +48,12 @@ class Film extends Model
         return $this->hasMany(Comment::class);
     }
 
+    /**
+     * Отношения с рейтингом
+     */
+    public function ratings(): HasMany
+    {
+        return $this->hasMany(Rating::class);
+    }
+
 }

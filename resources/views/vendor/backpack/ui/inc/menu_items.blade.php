@@ -5,4 +5,5 @@
 <x-backpack::menu-item title="Страны" :link="backpack_url('country')"/>
 <x-backpack::menu-item title="Типы" :link="backpack_url('type')"/>
 <x-backpack::menu-item title="Комментарии" :link="backpack_url('comment')"/>
+<x-backpack::menu-item title="Рейтинг" :link="backpack_url('rating')"/>
 
