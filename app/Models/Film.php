@@ -6,6 +6,7 @@ use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -56,4 +57,11 @@ class Film extends Model
         return $this->hasMany(Rating::class);
     }
 
+    /**
+     * Отношения с жанрами
+     */
+     public function genres(): BelongsToMany
+     {
+         return $this->belongsToMany(Genre::class, 'films_genres', 'film_id', 'genre_id');
+     }
 }
