@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Admin;
 
+use App\Models\Admin\Country;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -30,7 +31,7 @@ class CountryRequest extends FormRequest
             'alias' => [
                 'required',
                 'string',
-                Rule::unique('countries', 'alias')->ignore($this->request->get('id')),
+                Rule::unique(Country::class, 'alias')->ignore($this->request->get('id')),
             ]
         ];
     }
