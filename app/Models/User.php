@@ -47,8 +47,19 @@ class User extends Authenticatable
         ];
     }
 
+    /**
+     * Отношения с комментария
+     */
     public function comment(): HasMany
     {
-        return $this->hasMany(Comment::class,);
+        return $this->hasMany(Comment::class);
+    }
+
+    /**
+     * Отношения с рейтингом
+     */
+    public function ratings(): HasMany
+    {
+        return  $this->hasMany(Rating::class);
     }
 }
