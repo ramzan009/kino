@@ -7,4 +7,5 @@
 <x-backpack::menu-item title="Комментарии" :link="backpack_url('comment')"/>
 <x-backpack::menu-item title="Рейтинги" :link="backpack_url('rating')"/>
 <x-backpack::menu-item title="Жанры" :link="backpack_url('genre')"/>
+<x-backpack::menu-item title="Пользователи" :link="backpack_url('user')"/>
 
