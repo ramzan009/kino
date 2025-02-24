@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\Admin\FilmRequest;
-use App\Models\Film;
+use App\Http\Requests\Admin\GenreRequest;
+use App\Models\Genre;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
 use Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
@@ -12,7 +12,7 @@ use Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
 use Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
-class FilmCrudController extends CrudController
+class GenreCrudController extends CrudController
 {
 
     use ListOperation;
@@ -31,11 +31,11 @@ class FilmCrudController extends CrudController
      */
     public function setup()
     {
-        $this->language_model = 'models/Film.';
-        $this->language_model_fields = 'models/Film.fields.';
+        $this->language_model = 'models/Genre.';
+        $this->language_model_fields = 'models/Genre.fields.';
 
-        CRUD::setModel(Film::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/film');
+        CRUD::setModel(Genre::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/genre');
         CRUD::setEntityNameStrings(__($this->language_model . 'entity_name'), __($this->language_model . 'entity_plural_name'));
     }
 
@@ -57,20 +57,8 @@ class FilmCrudController extends CrudController
                 'label' => __($this->language_model_fields . 'name')
             ],
             [
-                'name'  => 'description',
-                'label' => __($this->language_model_fields . 'description')
-            ],
-            [
-                'name'  => 'date_publication',
-                'label' => __($this->language_model_fields . 'date_publication')
-            ],
-            [
-                'name'  => 'country',
-                'label' => __($this->language_model_fields . 'country_id')
-            ],
-            [
-                'name'  => 'type',
-                'label' => __($this->language_model_fields . 'type_id')
+                'name'  => 'alias',
+                'label' => __($this->language_model_fields . 'alias')
             ],
         ]);
     }
@@ -88,32 +76,16 @@ class FilmCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(FilmRequest::class);
+        CRUD::setValidation(GenreRequest::class);
         CRUD::addFields([
             [
                 'name'  => 'name',
                 'label' => __($this->language_model_fields . 'name'),
             ],
             [
-                'name'  => 'description',
-                'label' => __($this->language_model_fields . 'description'),
+                'name'  => 'alias',
+                'label' => __($this->language_model_fields . 'alias'),
             ],
-            [
-                'name'  => 'date_publication',
-                'label' => __($this->language_model_fields . 'date_publication')
-            ],
-            [
-                'name'  => 'country',
-                'label' => __($this->language_model_fields . 'country_id'),
-            ],
-            [
-                'name'  => 'type',
-                'label' => __($this->language_model_fields . 'type_id')
-            ],
-            [
-                'name'  => 'genres',
-                'label' => __($this->language_model_fields . 'genres')
-            ]
         ]);
     }
 
@@ -127,5 +99,4 @@ class FilmCrudController extends CrudController
     {
         $this->setupCreateOperation();
     }
-
 }
