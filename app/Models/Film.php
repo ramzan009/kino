@@ -64,4 +64,12 @@ class Film extends Model
      {
          return $this->belongsToMany(Genre::class, 'films_genres', 'film_id', 'genre_id');
      }
+
+     /**
+      * Отношения с авторами
+      */
+     public function authors(): BelongsToMany
+     {
+         return $this->BelongsToMany(Author::class, 'films_authors', 'film_id', 'author_id');
+     }
 }
