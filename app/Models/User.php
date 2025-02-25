@@ -67,7 +67,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Отношения с фильмами
+     * Отношения с избранными фильмами
      */
     public function favorites(): BelongsToMany
     {
