@@ -15,7 +15,9 @@ return [
         'description' => 'Описание',
         'date_publication' => 'Дата публикация',
         'country_id' => 'Страна',
-        'type_id' => 'Типы',
+        'type_id' => 'Тип',
+        'genres' => 'Жанры',
+        'authors' => 'Авторы'
     ],
 
 ];
