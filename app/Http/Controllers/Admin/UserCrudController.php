@@ -67,8 +67,8 @@ class UserCrudController extends CrudController
                 'label' => __($this->language_model_fields . 'email')
             ],
             [
-                'name'  => 'films',
-                'label' => __($this->language_model_fields . 'films'),
+                'name'  => 'favorites',
+                'label' => __($this->language_model_fields . 'favorites'),
             ]
         ]);
     }
@@ -107,8 +107,8 @@ class UserCrudController extends CrudController
                 'label' => __($this->language_model_fields . 'password'),
             ],
             [
-                'name'  => 'films',
-                'label' => __($this->language_model_fields . 'films'),
+                'name'  => 'favorites',
+                'label' => __($this->language_model_fields . 'favorites'),
             ]
         ]);
     }
@@ -138,8 +138,8 @@ class UserCrudController extends CrudController
                 'label' => __($this->language_model_fields . 'email'),
             ],
             [
-                'name'  => 'films',
-                'label' => __($this->language_model_fields . 'films'),
+                'name'  => 'favorites',
+                'label' => __($this->language_model_fields . 'favorites'),
             ]
         ]);
     }
