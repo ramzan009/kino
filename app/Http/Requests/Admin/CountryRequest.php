@@ -2,7 +2,8 @@
 
 namespace App\Http\Requests\Admin;
 
-use App\Models\Admin\Country;
+
+use App\Models\Country;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
