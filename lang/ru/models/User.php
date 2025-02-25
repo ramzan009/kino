@@ -2,8 +2,8 @@
 
 return [
 
-    'entity_name'        => 'Комментарий',
-    'entity_plural_name' => 'Комментарии',
+    'entity_name'        => 'Пользователь',
+    'entity_plural_name' => 'Пользователи',
 
     'fields' => [
         'id'         => 'ID',
@@ -15,5 +15,6 @@ return [
         'avatar' => 'Аватар',
         'email' => 'Почта',
         'password' => 'Пароль',
+        'favorites' => 'Избранные фильмы'
     ],
 ];

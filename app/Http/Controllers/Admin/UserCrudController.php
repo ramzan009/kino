@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 
+use App\Http\Requests\Admin\UserCreateRequest;
 use App\Http\Requests\Admin\UserRequest;
 use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
@@ -66,12 +67,8 @@ class UserCrudController extends CrudController
                 'label' => __($this->language_model_fields . 'email')
             ],
             [
-                'name'  => 'password',
-                'label' => __($this->language_model_fields . 'password')
-            ],
-            [
-                'name'  => 'films',
-                'label' => __($this->language_model_fields . 'films'),
+                'name'  => 'favorites',
+                'label' => __($this->language_model_fields . 'favorites'),
             ]
         ]);
     }
@@ -89,15 +86,17 @@ class UserCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(UserRequest::class);
+        CRUD::setValidation(UserCreateRequest::class);
         CRUD::addFields([
             [
                 'name'  => 'name',
                 'label' => __($this->language_model_fields . 'name'),
             ],
             [
-                'name'  => 'avatar',
-                'label' => __($this->language_model_fields . 'avatar'),
+                'name'      => 'avatar',
+                'label'     => __($this->language_model_fields . 'avatar'),
+                'type'      => 'upload',
+                'withFiles' => true
             ],
             [
                 'name'  => 'email',
@@ -108,8 +107,8 @@ class UserCrudController extends CrudController
                 'label' => __($this->language_model_fields . 'password'),
             ],
             [
-                'name'  => 'films',
-                'label' => __($this->language_model_fields . 'films'),
+                'name'  => 'favorites',
+                'label' => __($this->language_model_fields . 'favorites'),
             ]
         ]);
     }
@@ -122,6 +121,26 @@ class UserCrudController extends CrudController
      */
     protected function setupUpdateOperation()
     {
-        $this->setupCreateOperation();
+        CRUD::setValidation(UserRequest::class);
+        CRUD::addFields([
+            [
+                'name'  => 'name',
+                'label' => __($this->language_model_fields . 'name'),
+            ],
+            [
+                'name'      => 'avatar',
+                'label'     => __($this->language_model_fields . 'avatar'),
+                'type'      => 'upload',
+                'withFiles' => true
+            ],
+            [
+                'name'  => 'email',
+                'label' => __($this->language_model_fields . 'email'),
+            ],
+            [
+                'name'  => 'favorites',
+                'label' => __($this->language_model_fields . 'favorites'),
+            ]
+        ]);
     }
 }

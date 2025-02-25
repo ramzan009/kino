@@ -67,9 +67,9 @@ class User extends Authenticatable
     }
 
     /**
-     * Отношения с фильмами
+     * Отношения с избранными фильмами
      */
-    public function films(): BelongsToMany
+    public function favorites(): BelongsToMany
     {
         return $this->belongsToMany(Film::class, 'users_favorite_films', 'user_id', 'film_id' );
     }
