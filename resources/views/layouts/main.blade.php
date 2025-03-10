@@ -10,21 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <title>Document</title>
+    <title>@yield('title')</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
 </head>
 <body>
 @include('layouts.includes.menu')
 
-<div class="center">
-    <div><img class="slider-img" src="/img/images.jpg" style="width: 1200px" alt=""></div>
-    <div><img class="slider-img" src="/img/images.jpg" style="width: 1200px" alt=""></div>
-    <div><img class="slider-img" src="/img/images.jpg" style="width: 1200px" alt=""></div>
-    <div><img class="slider-img" src="/img/images.jpg" style="width: 1200px" alt=""></div>
-    <div><img class="slider-img" src="/img/images.jpg" style="width: 1200px" alt=""></div>
-</div>
-
+@yield('content')
 <script src="/assets/js/jquery-3.7.1.slim.min.js.js"></script>
 <script src="https://kit.fontawesome.com/a86f8867e8.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

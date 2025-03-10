@@ -1,6 +1,6 @@
 import './bootstrap';
 
-$('.center').slick({
+$('.my-slider').slick({
     centerMode: true,
     centerPadding: '315px',
     slidesToShow: 1,

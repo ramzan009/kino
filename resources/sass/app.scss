@@ -178,8 +178,7 @@ body {
 
 // Код для кнопки слайдера
 
-
-.center {
+.my-slider {
     margin-top: 20px;
     position: relative;
 }
@@ -205,6 +204,7 @@ body {
 
 .slider-img {
     border-radius: 25px;
+    width: 1200px;
 }
 
 .slick-slide {
