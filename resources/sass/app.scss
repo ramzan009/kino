@@ -1,0 +1,216 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+a:focus, a:active {
+    outline: none;
+}
+
+nav, footer, header, aside {
+    display: block;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+body {
+    //background-color: #d39e00;
+    background-color: #100e19;
+    font-family: "Noto Sans", serif;
+}
+
+//Код для меню
+
+.block {
+    background-color: #100e20;
+}
+
+.under-block {
+    margin: 0 auto;
+    width: 1000px;
+    height: 70px;
+}
+
+.block-title {
+    margin-top: 5px;
+    width: 95px;
+}
+
+.under-block-2 {
+    display: flex;
+}
+
+.block-menu-under {
+    margin-top: 26px;
+    flex: 1;
+}
+
+.block-menu-ul {
+    display: flex;
+}
+
+.nbl-picture {
+    width: 75px;
+}
+
+.block-ul-li {
+    color: #807f85;
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.block-ul-li:hover {
+    color: #ffffff;
+}
+
+.block-menu-input {
+    display: flex;
+    margin: 26px 27px 0 0;
+}
+
+.search-menu {
+    padding-right: 5px;
+    font-size: 15px;
+    color: #807f85;
+}
+
+.search-menu:hover {
+    color: #ffffff;
+}
+
+.block-menu-notification {
+    display: flex;
+    margin: 26px 30px 0 0;
+}
+
+.notification-a {
+    color: #807f85;
+}
+
+.notification-a:hover {
+    color: #ffffff;
+}
+
+.block-menu-authorization {
+    margin-top: 15px;
+    padding: 12px 5px 5px 13px;
+    background-color: #1f1b2e;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+}
+
+.bell-menu {
+    font-size: 18px;
+}
+
+.block-menu-authorization a {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.block-menu-authorization:hover {
+    background-color: #312b48;
+}
+
+.user-menu {
+    margin-right: 6px;
+}
+
+
+// Код для кнопки слайдера
+
+
+.center {
+    margin-top: 20px;
+    position: relative;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 0;
+    width: 45px;
+    height: 60px;
+}
+
+.slick-prev {
+    left: 12%;
+    z-index: 9;
+    background: url("/img/free-icon-left.png") 0 0 / 50px no-repeat;
+}
+
+.slick-next {
+    right: 13%;
+    background: url("/img/free-icon-right.png") 0 0 / 50px no-repeat;
+}
+
+.slider-img {
+    border-radius: 25px;
+}
+
+.slick-slide {
+    opacity: 0.5;
+}
+
+.slick-current {
+    opacity: 1;
+}
