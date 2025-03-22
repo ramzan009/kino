@@ -76,105 +76,92 @@ body {
 
 //Код для меню
 
-.block {
-    background-color: #100e20;
+.menu-img-a {
+    width: 80px;
+    margin-right: 40px;
 }
 
-.under-block {
-    margin: 0 auto;
-    width: 1000px;
-    height: 70px;
+.under-block-menu {
+    padding: 5px 0 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background-color: #d39e00;
+    background-color: #100e23;
 }
 
-.block-title {
-    margin-top: 5px;
-    width: 95px;
+.under-block-menu-ul {
+    width: 700px;
 }
 
-.under-block-2 {
+.menu-ul {
     display: flex;
 }
 
-.block-menu-under {
-    margin-top: 26px;
-    flex: 1;
-}
-
-.block-menu-ul {
-    display: flex;
-}
-
-.nbl-picture {
-    width: 75px;
-}
-
-.block-ul-li {
-    color: #807f85;
-    margin-left: 15px;
+.menu-ul li {
+    padding-left: 20px;
     font-size: 16px;
+    color: #828187;
+}
+
+.menu-ul li a {
+    color: #828187;
     font-weight: 600;
-    cursor: pointer;
 }
 
-.block-ul-li:hover {
+.menu-ul li a:hover {
     color: #ffffff;
 }
 
-.block-menu-input {
-    display: flex;
-    margin: 26px 27px 0 0;
+.under-block-menu-ul-icons-search {
+    margin-right: 30px;
 }
 
-.search-menu {
-    padding-right: 5px;
+.under-block-menu-ul-icons-search i {
     font-size: 15px;
-    color: #807f85;
+    padding-right: 8px;
 }
 
-.search-menu:hover {
+.under-block-menu-ul-icons-search a {
+    font-size: 17px;
+    font-weight: 500;
+    color: #828187;
+}
+
+.under-block-menu-ul-icons-search a:hover {
     color: #ffffff;
 }
 
-.block-menu-notification {
-    display: flex;
-    margin: 26px 30px 0 0;
-}
-
-.notification-a {
-    color: #807f85;
-}
-
-.notification-a:hover {
-    color: #ffffff;
-}
-
-.block-menu-authorization {
-    margin-top: 15px;
-    padding: 12px 5px 5px 13px;
-    background-color: #1f1b2e;
-    border-radius: 10px;
-    width: 100px;
-    height: 40px;
-}
-
-.bell-menu {
+.under-block-menu-ul-icons-bell i {
     font-size: 18px;
+    color: #807977;
 }
 
-.block-menu-authorization a {
+.under-block-menu-ul-icons-bell i:hover {
     color: #ffffff;
+}
+
+.under-block-menu-ul-icons-user {
+    margin-left: 35px;
+    background-color: #1f1b2e;
+    padding: 10px 15px 11px 12px;
+    border-radius: 10px;
+}
+
+.under-block-menu-ul-icons-user i {
+    padding-right: 10px;
+    color: #807977;
+}
+
+.under-block-menu-ul-icons-user a {
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
+    color: #ffffff;
 }
 
-.block-menu-authorization:hover {
-    background-color: #312b48;
+.under-block-menu-ul-icons-user:hover {
+    background-color: #312b45;
 }
-
-.user-menu {
-    margin-right: 6px;
-}
-
 
 // Код для кнопки слайдера
 
@@ -214,3 +201,264 @@ body {
 .slick-current {
     opacity: 1;
 }
+
+.block-dropdown {
+    display: flex;
+    margin-top: 30px;
+}
+
+
+// Код для кнопки button
+
+.block-button {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 1170px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 15px;
+    font-weight: 700;
+    background-color: #2f1937;
+    color: #FFFFFF;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+//Код для блока фильм
+
+.block-film {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.block-under-film {
+    display: flex;
+    gap: 14px;
+}
+
+.block-window {
+    display: none;
+    color: #FFFFFF;
+    position: absolute;
+    background-color: rgba(0,0,0, 0.7);
+    width: 160px;
+    height: 248px;
+    border-radius: 15px;
+}
+
+.film:hover .block-window {
+    display: block;
+}
+
+.block-h1-title h1 {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.film img {
+    width: 160px;
+    border-radius: 15px;
+}
+
+.title-film {
+    padding-top: 9px;
+}
+
+.title-film p {
+    font-size: 15px;
+    color: #d1d6de;
+    font-weight: 500;
+}
+
+.text-p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: red;
+}
+
+.block-under-window {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.icons-window {
+    height: 125px;
+}
+
+.icons-window i {
+    padding-top: 15px;
+    color: #FFFFFF;
+}
+
+.block-under-window-1 {
+    margin-left: 15px;
+}
+
+.block-window-information h1{
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
+.block-window-information span {
+    font-size: 15px;
+    color: #FFFFFF;
+    line-height: 18px;
+}
+
+.block-window-information h5 {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.film:hover {
+    transform: scale(1.05);
+}
+
+//Код для блок footer
+
+.block-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.under-block-footer {
+    display: flex;
+    border-top: 1px solid #36353e;
+    border-bottom: 1px solid #36353e;
+}
+
+.block-for-indentation {
+    display: flex;
+    margin: 45px 0 45px 0;
+}
+
+.block-value-footer-1 {
+    width: 310px;
+}
+
+.tag-h1 {
+    color: #FFFFFF;
+    font-size: 17px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.block-value-footer-2 {
+    width: 300px;
+    padding-left: 20px;
+}
+
+.block-value-footer-3 {
+    width: 300px;
+}
+
+.block-value-footer-4 {
+    width: 300px;
+}
+
+.block-value-footer-1 ul li {
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.block-value-footer-1 ul li a {
+    color: #79747b;
+    font-size: 14px;
+}
+
+.block-value-footer-1 ul li a:hover {
+    color: #FFFFFF;
+}
+
+.block-value-footer-2 ul li {
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.block-value-footer-2 ul li a {
+    color: #79747b;
+    font-size: 14px;
+}
+
+.block-value-footer-2 ul li a:hover {
+    color: #FFFFFF;
+}
+
+.block-value-footer-3 ul li {
+    color: #79747b;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 13px;
+}
+
+.block-value-footer-3 ul li p {
+    line-height: 23px;
+}
+
+.block-value-footer-3 ul a {
+    color: #FFFFFF;
+}
+
+.icons-write {
+    display: flex;
+    width: 210px;
+    height: 40px;
+    background-color: #1f1b2e;
+    border-radius: 7px;
+    justify-content: center;
+    padding-top: 11px;
+    margin-bottom: 20px;
+}
+
+.icons-write:hover {
+    background-color: #312b45;
+}
+
+.icons-envelope {
+    background-color: #1f1b2e;
+    padding: 7px 10px 7px 10px;
+    border-radius: 7px;
+}
+
+.icons-envelope:hover {
+    background-color: #312b45;
+}
+
+.img-microphone {
+    border-radius: 25px;
+}
+
+.block-img-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.block-img-footer-p {
+    display: flex;
+    color: #79747b;
+    text-align: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.information-about-site {
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    margin-top: 30px;
+    line-height: 23px;
+    padding-bottom: 50px;
+}
+

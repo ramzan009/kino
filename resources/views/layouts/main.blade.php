@@ -15,7 +15,6 @@
 
 </head>
 <body>
-@include('layouts.includes.menu')
 
 @yield('content')
 <script src="/assets/js/jquery-3.7.1.slim.min.js.js"></script>
