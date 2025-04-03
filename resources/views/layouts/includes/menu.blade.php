@@ -1,7 +1,7 @@
 <div class="block-menu">
     <div class="under-block-menu">
         <div class="menu-img-a">
-            <a href=""><img class="nbl-picture" itemprop="logo" alt="Иви" data-stub="false" src="https://solea-parent.dfs.ivi.ru/picture/f30745,ffffff/reposition_iviLogoPlateRounded.svg"></a>
+            <a href="/"><img class="nbl-picture" itemprop="logo" alt="Иви" data-stub="false" src="https://solea-parent.dfs.ivi.ru/picture/f30745,ffffff/reposition_iviLogoPlateRounded.svg"></a>
         </div>
         <div class="under-block-menu-ul">
             <ul class="menu-ul">
