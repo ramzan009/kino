@@ -86,12 +86,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    //background-color: #d39e00;
     background-color: #100e23;
+    margin-right: 30px;
 }
 
 .under-block-menu-ul {
-    width: 700px;
+    width: 790px;
 }
 
 .menu-ul {
@@ -99,7 +99,7 @@ body {
 }
 
 .menu-ul li {
-    padding-left: 20px;
+    padding-left: 30px;
     font-size: 16px;
     color: #828187;
 }
@@ -216,7 +216,7 @@ body {
     justify-content: center;
 }
 
-button {
+.block-button button {
     width: 1170px;
     height: 50px;
     font-size: 16px;
@@ -226,7 +226,7 @@ button {
     color: #FFFFFF;
 }
 
-button:hover {
+.block-button button:hover {
     transform: scale(1.05);
 }
 
@@ -248,7 +248,7 @@ button:hover {
     display: none;
     color: #FFFFFF;
     position: absolute;
-    background-color: rgba(0,0,0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 160px;
     height: 248px;
     border-radius: 15px;
@@ -304,7 +304,7 @@ button:hover {
     margin-left: 15px;
 }
 
-.block-window-information h1{
+.block-window-information h1 {
     font-size: 24px;
     color: #FFFFFF;
     font-weight: 700;
@@ -461,4 +461,556 @@ button:hover {
     line-height: 23px;
     padding-bottom: 50px;
 }
+
+// Код для блока фильма информация
+
+.block-movie-information-film {
+    display: flex;
+    justify-content: center;
+}
+
+.block-under-for-headers-film ul {
+    display: flex;
+}
+
+.block-under-for-headers-film {
+    margin: 20px 0 20px 0;
+}
+
+.block-under-for-headers-film ul li {
+    padding: 0 7px 0 7px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #bebcb9;
+}
+
+.block-under-for-headers-film a {
+    font-weight: 600;
+    font-size: 15px;
+    color: #bebcb9;
+    border-bottom: 1px solid #36353e;
+}
+
+.block-under-for-headers-film a:hover {
+    border-bottom: 1px solid #aabbbb;
+}
+
+.block-for-image-film video {
+    width: 650px;
+    height: 400px;
+}
+
+.block-under-movie-information-film-1 {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-under-movie-information-film-2 {
+    display: flex;
+}
+
+.block-for-video-film {
+    width: 770px;
+}
+
+.block-for-description-film {
+    width: 420px;
+    //background-color: red;
+}
+
+.block-film-h1-description h1 {
+    color: #FFFFFF;
+    font-size: 35px;
+    font-weight: 900;
+    text-align: center;
+    margin: 25px 0 20px 0;
+}
+
+.block-ul-film-information ul a {
+    color: #bebdbf;
+}
+
+.block-film-information ul {
+    display: flex;
+    justify-content: center;
+    color: #bebdbf;
+    line-height: 23px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.block-ul-film-information li {
+    margin-left: 10px;
+}
+
+.block-ul-film-information-2 li {
+    margin-left: 10px;
+}
+
+.block-ul-film-information-3 li {
+    margin-left: 10px;
+}
+
+.full-li-film {
+    color: #FFFFFF;
+    background-color: #39363e;
+    padding: 0 5px 1px 5px;
+}
+
+.block-under-rating-film {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 0 17px;
+}
+
+.block-rating-value-film {
+    display: flex;
+
+}
+
+.block-rating-img-film {
+    width: 60px;
+    margin: 0 10px 0 10px;
+}
+
+.block-rating-img-film img {
+    width: 55px;
+    background-color: #36353e;
+    padding: 5px 5px 5px 5px;
+    border-radius: 15px;
+}
+
+.block-rating-img-film img:hover {
+    transform: scale(1.06);
+    background-color: #4d4a51;
+}
+
+.block-rating-a-film {
+    margin-right: 5px;
+    width: 65px;
+}
+
+.block-rating-a-film p:hover {
+    color: #FFFFFF;
+}
+
+.block-rating-img-film p {
+    padding-top: 6px;
+    font-size: 14px;
+    text-align: center;
+    color: #848285;
+}
+
+.block-rating-img-film p:hover {
+    color: #FFFFFF;
+}
+
+.block-rating-a-film p {
+    padding-top: 6px;
+    font-size: 14px;
+    text-align: center;
+    color: #848285;
+}
+
+.block-background-color-film {
+    width: 60px;
+    padding: 5px 5px 5px 5px;
+    background-color: #36353e;
+    border-radius: 15px;
+}
+
+.block-under-background-color-film {
+    display: flex;
+    justify-content: center;
+}
+
+.block-under-background-color-film a {
+    background-color: #00a65a;
+    padding: 14px 13px 14px 13px;
+    border-radius: 15px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.block-for-favorites-film {
+    display: flex;
+    margin: 25px 0 0 20px;
+}
+
+.block-for-favorites-film-button button {
+    border-radius: 10px;
+    width: 340px;
+    height: 36px;
+    font-size: 16px;
+    background-color: #26222a;
+    color: #c3c1c4;
+    font-weight: 600;
+}
+
+.block-for-favorites-film-button button:hover {
+    transform: scale(1.05);
+    background-color: #3c393f;
+}
+
+.description-favorites {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.block-for-favorites-film-a-i {
+    margin-left: 13px;
+    background-color: #26222a;
+    padding-top: 10px;
+    border-radius: 12px;
+}
+
+.block-for-favorites-film-a-i:hover {
+    transform: scale(1.05);
+    background-color: #3c393f;
+}
+
+.block-for-favorites-film-a-i a {
+    padding: 0 12px 15px 12px;
+    font-size: 17px;
+    color: #c3c1c4;
+}
+
+
+// Текст описания
+
+.block-description-text-film-1 {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: left;
+    color: #bdbcbb;
+    margin-bottom: 10px;
+}
+
+.block-description-text-film-2 {
+    display: none;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #37363e;
+}
+
+.button-details-film {
+    margin-top: 30px;
+    color: #827f80;
+}
+
+.button-details-film:hover {
+    color: #FFFFFF;
+}
+
+.dont-know-block {
+    color: #bdbcbb;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: left;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #37363e;
+}
+
+.block-language-film {
+    margin-bottom: 25px;
+}
+
+.block-language-film h1 {
+    color: #bdbcbb;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.block-language-film p {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.block-subtitles-film {
+    margin-bottom: 20px;
+}
+
+.block-subtitles-film h1 {
+    color: #bdbcbb;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.block-subtitles-film p {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.block-setting-explanations-film {
+    margin-bottom: 30px;
+}
+
+.block-setting-explanations-film p {
+    color: #bdbcbb;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.block-setting-explanations-film span {
+    color: #FFFFFF;
+}
+
+
+// Код для блок рейтинга
+
+.block-for-estimates-film {
+    margin: 20px 0 20px 0;
+    background-color: #24222b;
+    border-radius: 10px;
+}
+
+.block-for-estimates-value-film {
+    display: flex;
+    padding: 15px 10px 15px 10px;
+}
+
+.block-integer-estimates-film {
+    margin-right: 20px;
+}
+
+.block-integer-estimates-film h1 {
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: #00a65a;
+    width: 64px;
+    height: 60px;
+    padding: 15px 10px 12px 14px;
+    border-radius: 12px;
+}
+
+.block-text-estimates-film {
+    width: 245px;
+}
+
+.block-text-estimates-film h1 {
+    color: #FFFFFF;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.block-text-estimates-film p {
+    color: #bdbcbb;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.block-text-estimates-film span {
+    color: #bdbcbb;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.block-button-estimates-film {
+    display: flex;
+    align-items: center;
+}
+
+.block-button-estimates-film button {
+    color: #FFFFFF;
+    width: 70px;
+    height: 22px;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 13px;
+    background-color: transparent;
+    border: 1px solid #37363e;
+}
+
+.block-button-estimates-film button:hover {
+    transform: scale(1.05);
+}
+
+// Код для блока актера
+
+.block-actors-in-information-film {
+    margin: 30px 0 45px 0;
+}
+
+.block-header-actors-film {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-actors-and-creators-film h1 {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.block-see-all-actors-film a {
+    font-weight: 700;
+    font-size: 15px;
+    color: #626168;
+}
+
+.block-see-all-actors-film a:hover {
+    color: #FFFFFF;
+}
+
+.block-information-about-actors {
+    margin-top: 20px;
+    display: flex;
+}
+
+.block-actors-img-film {
+    margin: 0 18px 0 5px;
+}
+
+.block-actors-img-film img {
+    width: 87px;
+    border-radius: 50px;
+    margin-bottom: 8px;
+}
+
+.block-actors-img-film:hover {
+    transform: scale(1.05);
+}
+
+.block-actors-span-film-description-film {
+    text-align: center;
+    width: 85px;
+    margin-bottom: 5px;
+}
+
+.block-actors-span-film-description-film span {
+    font-size: 15px;
+    font-weight: 600;
+    color: #FFFFFF;
+
+}
+
+.block-actors-img-film p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #626168;
+}
+
+
+.block-includes-film-1 h1 {
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.dont-know-what-to-name-the-block-anymore {
+    margin-bottom: 30px;
+}
+
+
+// Код для блока комментария
+
+
+.block-for-writing-comment-see {
+    margin-bottom: 30px;
+}
+
+.block-for-title-comments-film {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.block-for-title-comments-h1-1 a {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 25px;
+    border-bottom: 1px solid #36353e;
+}
+
+.block-for-title-comments-h1-1 a:hover {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.block-for-title-comments-h1-2 button {
+    color: #FFFFFF;
+    font-size: 13px;
+    width: 130px;
+    height: 32px;
+    border-radius: 7px;
+    border: 1px solid #36353e;
+    background-color: transparent;
+    padding-bottom: 2px;
+}
+
+.block-for-title-comments-h1-2 button:hover {
+    transform: scale(1.05);
+}
+
+
+.block-about-p-comment-film {
+    color: #9c9ea2;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.block-comment-text-film {
+    margin-top: 20px;
+    width: 310px;
+    background-color: #1f1b2e;
+    padding: 20px 25px 20px 25px;
+    border-radius: 18px;
+}
+
+.block-comment-text-film:hover {
+    background-color: #342f46;
+    transform: scale(1.04);
+}
+
+.block-name-user-comment-film h1 {
+    color: #a5a1b2;
+    font-weight: 600;
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+
+.block-text-film {
+    font-size: 15px;
+    color: #FFFFFF;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.block-datetime-comments-and-like {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.block-datetime-comment p {
+    color: #a5a1b2;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.block-like-comment {
+    display: flex;
+}
+
+.block-like-comment a {
+    color: #a5a1b2;
+    margin-left: 10px;
+}
+
+.block-like-comment p {
+    color: #a5a1b2;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
 
