@@ -3,6 +3,7 @@
 @include('layouts.includes.menu')
 
 @section('content')
+    @vite(['resources/js/film.js'])
     <div class="block-movie-information-film">
         <div class="block-under-movie-information-film-1">
             <div class="block-under-for-headers-film">
@@ -85,7 +86,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="block-description-about-the-film-big">
                         <div class="block-under-description-about-the-film-value">
                             <div class="block-description-text-film">

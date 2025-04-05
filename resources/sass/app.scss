@@ -163,6 +163,63 @@ body {
     background-color: #312b45;
 }
 
+// Код для модального окна
+
+.model-for-menu {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.block-open {
+    display: block;
+}
+
+.icons-xmark {
+    color: #a5a1b2;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    margin: 25px 30px 0 0;
+}
+
+.block-under-model-menu-value {
+    margin: 5% auto;
+    width: 65%;
+}
+
+.block-model-input-header h1 {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 33px;
+}
+
+.input-model {
+    width: 820px;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.block-recommendations-about-film-model {
+    display: flex;
+}
+
+.input-h1-model-1 h1 {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 // Код для кнопки слайдера
 
 .my-slider {
@@ -694,8 +751,13 @@ body {
     border-bottom: 1px solid #37363e;
 }
 
+.block-description-open {
+    display: block;
+}
+
 .button-details-film {
     margin-top: 30px;
+    cursor: pointer;
     color: #827f80;
 }
 
@@ -1014,3 +1076,150 @@ body {
 }
 
 
+//// Код для блока авторизация
+
+.block-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.block-under-login {
+    width: 430px;
+    border: 1px solid #36353e;
+}
+
+.block-header-login h1 {
+    color: #FFFFFF;
+    font-size: 25px;
+    padding: 30px 0 30px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.block-login-input {
+    padding: 0 20px 35px 25px;
+}
+
+.block-login-input-1 {
+    margin-bottom: 25px;
+}
+
+.block-login-input-1 p {
+    color: #828187;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.block-login-input-1 input {
+    width: 383px;
+    height: 29px;
+    outline: none;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.block-login-input-2 {
+    margin-bottom: 15px;
+}
+
+.block-login-input-2 p {
+    color: #828187;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.block-login-input-2 input {
+    width: 383px;
+    height: 29px;
+    margin-bottom: 20px;
+    outline: none;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.block-login-input-2 a {
+    color: #828187;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.block-login-input-2 a:hover {
+    color: #FFFFFF;
+}
+
+.class-login-button {
+    margin-top: 15px;
+    width: 380px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+
+/// Код для регистрация
+
+.block-register {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.block-under-register {
+    border: 1px solid #36353e;
+    width: 450px;
+}
+
+.block-header-register h1{
+    color: #FFFFFF;
+    font-size: 25px;
+    padding: 30px 0 30px 0;
+    text-align: center;
+}
+
+.block-register-input {
+    padding: 0 20px 35px 25px;
+}
+
+.block-register-input-1 {
+    margin-bottom: 20px;
+}
+
+.block-register-input-1 p {
+    color: #828187;
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.block-register-input-1 input {
+    width: 400px;
+    height: 30px;
+    outline: none;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.tag-back-register{
+    color: #828187;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.tag-back-register:hover{
+    color: #FFFFFF;
+}
+
+.class-register-button {
+    margin-top: 15px;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+}
