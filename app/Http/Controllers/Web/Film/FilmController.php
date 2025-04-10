@@ -3,12 +3,19 @@
 namespace App\Http\Controllers\Web\Film;
 
 use App\Http\Controllers\Controller;
+use App\Models\Film;
 
 class FilmController extends Controller
 {
-    public function film()
+    public function film($id)
     {
-      return view('web.film.film');
+        $film = Film::query()
+            ->with([
+                    'authors',
+                    'genres',
+            ])
+            ->findOrFail($id);
+        return view('web.film.film', compact('film'));
     }
 }
 

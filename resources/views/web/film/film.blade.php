@@ -4,15 +4,16 @@
 
 @section('content')
     @vite(['resources/js/film.js'])
+
     <div class="block-movie-information-film">
         <div class="block-under-movie-information-film-1">
             <div class="block-under-for-headers-film">
                 <ul>
-                    <li><a href="">Фильмы</a></li>
+                    <li><a href="">{{ $film->type->name }}</a></li>
                     <li>/</li>
-                    <li><a href="">Боевики</a></li>
+                    <li><a href="">{{ $film->genres->first()->name }}</a></li>
                     <li>/</li>
-                    <li>Звезда</li>
+                    <li><a href="">{{ $film->name}}</a></li>
                 </ul>
             </div>
             <div class="block-under-movie-information-film-2">
@@ -21,22 +22,22 @@
                 </div>
                 <div class="block-for-description-film">
                     <div class="block-film-h1-description">
-                        <h1>Фильм Звезда смотреть онлайн</h1>
+                        <h1>Фильм {{ $film->name }} смотреть онлайн</h1>
                     </div>
                     <div class="block-film-information">
                         <div class="block-ul-film-information">
                             <ul>
-                                <li><a href="">2002</a></li>
+                                <li><a href="">{{ $film->date_publication }}</a></li>
                                 <li>1 ч. 30 мин.</li>
                                 <li>16+</li>
                             </ul>
                         </div>
                         <div class="block-ul-film-information-2">
                             <ul>
-                                <li>Боевик</li>
-                                <li>Драма</li>
-                                <li>Приключения</li>
-                                <li>Россия</li>
+                                @foreach($film->genres as $genre)
+                                <li>{{ $genre->name }}</li>
+                                @endforeach
+                                    <li>{{ $film->country->name }}</li>
                             </ul>
                         </div>
                         <div class="block-ul-film-information-3">
@@ -57,22 +58,12 @@
                                         </div>
                                         <p>Рейтинг иви</p>
                                     </div>
-                                    <div class="block-rating-img-film">
-                                        <a href=""><img src="/img/join.ivi.jpeg" alt=""></a>
-                                        <p>Рейтинг иви</p>
-                                    </div>
-                                    <div class="block-rating-img-film">
-                                        <a href=""><img src="/img/join.ivi.jpeg" alt=""></a>
-                                        <p>Рейтинг иви</p>
-                                    </div>
-                                    <div class="block-rating-img-film">
-                                        <a href=""><img src="/img/join.ivi.jpeg" alt=""></a>
-                                        <p>Рейтинг иви</p>
-                                    </div>
-                                    <div class="block-rating-img-film">
-                                        <a href=""><img src="/img/join.ivi.jpeg" alt=""></a>
-                                        <p>Рейтинг иви</p>
-                                    </div>
+                                    @for($i = 0; $i < 4; $i++)
+                                        <div class="block-rating-img-film">
+                                            <a href=""><img src="/img/join.ivi.jpeg" alt=""></a>
+                                            <p>{{ $film->authors[$i]->name}}</p>
+                                        </div>
+                                    @endfor
                                 </div>
                             </div>
                         </div>
@@ -89,27 +80,12 @@
                     <div class="block-description-about-the-film-big">
                         <div class="block-under-description-about-the-film-value">
                             <div class="block-description-text-film">
-                                <div class="block-description-text-film-1">В 1949 году фильм о славном подвиге советских
-                                    разведчиков, поставленный режиссером
-                                    Александром Ивановым, к показу не допустили из-за безапелляционного отзыва Сталина:
-                                    «Фильм отличный, конец переснять». Современный ремейк картины «Звезда», добравшейся
-                                    до зрителя лишь в 1953-м, был сразу же принят «на ура»: свидетельством тому служат
-                                    многочисленные кинонаграды и номинации. В нашем интернет-кинотеатре в...
+                                <div class="block-description-text-film-1">
+                                    {{ mb_substr($film->description, 0, 350) }}
                                 </div>
                                 <div class="block-description-text-film-2">
                                     <div class="dont-know-block">
-                                        свободном доступе можно посмотреть онлайн ленту «Звезда» – военную драму 2002
-                                        года, снятую по одноименной повести Эммануила Казакевича. Главные роли в новой
-                                        интерпретации доверены Игорю Петренко, Алексею Панину, Артему Семакину, Алексею
-                                        Кравченко, Анатолию Гущину, Амаду Мамадакову и Юрию Лагуте. Летом 1944-го
-                                        Красная Армия вдохновенно продвигается к западным границам СССР. Немецкие войска
-                                        упорно цепляются за каждую пядь когда-то захваченной земли. До советского
-                                        командования доходят сведения, что враг планирует глобальную перегруппировку
-                                        сил, а значит, необходимо срочно прояснить обстановку. Пробраться в тыл
-                                        противника поручено группе молодых разведчиков.
-
-                                        Приглашаем посмотреть фильм «Звезда» в нашем онлайн-кинотеатре в хорошем HD
-                                        качестве. Приятного просмотра!
+                                        {{ mb_substr($film->description, 350 ) }}
                                     </div>
                                     <div class="block-language-film">
                                         <h1>Языки</h1>
@@ -159,105 +135,17 @@
                     </div>
                 </div>
                 <div class="block-information-about-actors">
-                    <a href="">
-                        <div class="block-actors-img-film">
-                            <img src="/img/acter.ivi.jpg" alt="">
-                            <div class="block-actors-span-film-description-film">
-                                <span>Евгений Антропов</span>
+                    @foreach($film->authors as $author)
+                        <a href="">
+                            <div class="block-actors-img-film">
+                                <img src="/img/acter.ivi.jpg" alt="">
+                                <div class="block-actors-span-film-description-film">
+                                    <span>{{ $author->name }}</span>
+                                </div>
+                                <p>актер</p>
                             </div>
-                            <p>режиссёр</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="block-actors-img-film">
-                            <img src="/img/acter.ivi.jpg" alt="">
-                            <div class="block-actors-span-film-description-film">
-                                <span>Евгений Антропов</span>
-                            </div>
-                            <p>режиссёр</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="block-actors-img-film">
-                            <img src="/img/acter.ivi.jpg" alt="">
-                            <div class="block-actors-span-film-description-film">
-                                <span>Евгений Антропов</span>
-                            </div>
-                            <p>режиссёр</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="block-actors-img-film">
-                            <img src="/img/acter.ivi.jpg" alt="">
-                            <div class="block-actors-span-film-description-film">
-                                <span>Евгений Антропов</span>
-                            </div>
-                            <p>режиссёр</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="block-actors-img-film">
-                            <img src="/img/acter.ivi.jpg" alt="">
-                            <div class="block-actors-span-film-description-film">
-                                <span>Евгений Антропов</span>
-                            </div>
-                            <p>режиссёр</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="block-actors-img-film">
-                            <img src="/img/acter.ivi.jpg" alt="">
-                            <div class="block-actors-span-film-description-film">
-                                <span>Евгений Антропов</span>
-                            </div>
-                            <p>режиссёр</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="block-actors-img-film">
-                            <img src="/img/acter.ivi.jpg" alt="">
-                            <div class="block-actors-span-film-description-film">
-                                <span>Евгений Антропов</span>
-                            </div>
-                            <p>режиссёр</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="block-actors-img-film">
-                            <img src="/img/acter.ivi.jpg" alt="">
-                            <div class="block-actors-span-film-description-film">
-                                <span>Евгений Антропов</span>
-                            </div>
-                            <p>режиссёр</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="block-actors-img-film">
-                            <img src="/img/acter.ivi.jpg" alt="">
-                            <div class="block-actors-span-film-description-film">
-                                <span>Евгений Антропов</span>
-                            </div>
-                            <p>режиссёр</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="block-actors-img-film">
-                            <img src="/img/acter.ivi.jpg" alt="">
-                            <div class="block-actors-span-film-description-film">
-                                <span>Евгений Антропов</span>
-                            </div>
-                            <p>режиссёр</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="block-actors-img-film">
-                            <img src="/img/acter.ivi.jpg" alt="">
-                            <div class="block-actors-span-film-description-film">
-                                <span>Евгений Антропов</span>
-                            </div>
-                            <p>режиссёр</p>
-                        </div>
-                    </a>
+                        </a>
+                    @endforeach
                 </div>
             </div>
             <div class="dont-know-what-to-name-the-block-anymore">

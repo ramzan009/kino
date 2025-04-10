@@ -1,9 +1,8 @@
 import './bootstrap';
-import {list} from "postcss";
 
 $('.my-slider').slick({
     centerMode: true,
-    centerPadding: '315px',
+    centerPadding: '287px',
     slidesToShow: 1,
     responsive: [
         {
