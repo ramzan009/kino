@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Requests\Admin;
+namespace App\Http\Requests;
 
+use App\Models\Country;
+use App\Models\Type;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class TypeRequest extends FormRequest
+class FilmRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,14 +25,27 @@ class TypeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'  => [
+            'name' => [
                 'required',
                 'string',
             ],
-            'alias' => [
+            'description' => [
                 'required',
                 'string',
-                Rule::unique('types', 'alias')->ignore($this->request->get('id')),
+            ],
+            'date_publication' => [
+                'required',
+                'date'
+            ],
+            'country'       => [
+                'required',
+                'integer',
+                Rule::exists(Country::class, 'id'),
+            ],
+            'type' => [
+                'required',
+                'integer',
+                Rule::exists(Type::class, 'id'),
             ]
         ];
     }

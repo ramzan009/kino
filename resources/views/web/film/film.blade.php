@@ -443,7 +443,7 @@
                         <h1><a href="">Отзывы</a></h1>
                     </div>
                     <div class="block-for-title-comments-h1-2">
-                        <a href="">
+                        <a href="{{ route('comment') }}">
                             <button>Оставить отзыв</button>
                         </a>
                     </div>
