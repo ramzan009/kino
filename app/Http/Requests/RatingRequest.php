@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CommentRequest extends FormRequest
+class RatingRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,18 +22,18 @@ class CommentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'film'    => [
+            'film' => [
                 'required',
                 'integer',
             ],
-            'user'    => [
+            'user' => [
                 'required',
                 'integer',
             ],
-            'comment' => [
-                'required',
-                'string',
-            ]
+            'rating' => [
+              'required',
+              'integer',
+            ],
         ];
     }
 }

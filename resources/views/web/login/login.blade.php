@@ -15,10 +15,16 @@
                 <div class="block-login-input">
                     <div class="block-login-input-1">
                         <p>Почта</p>
-                        <input name="email" type="email" placeholder="Введите почту...">
+                        @error('email')
+                        <label class="error-label" for="form2Example18">{{ $message }}</label>
+                        @enderror
+                        <input name="email" type="email" value="{{ old('email') }}" placeholder="Введите почту...">
                     </div>
                     <div class="block-login-input-2">
                         <p>Пароль</p>
+                        @error('password')
+                        <label class="error-label" for="form2Example18">{{ $message }}</label>
+                        @enderror
                         <input name="password" type="password" placeholder="Введите пароль...">
                         <a href="{{ route('register') }}">Зарегистрироваться</a>
                     </div>

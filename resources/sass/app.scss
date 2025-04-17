@@ -200,7 +200,7 @@ body {
     margin-bottom: 33px;
 }
 
-.input-model {
+.input_model {
     width: 820px;
     height: 40px;
     border-radius: 10px;
@@ -208,6 +208,16 @@ body {
     outline: none;
     cursor: pointer;
     margin-bottom: 30px;
+}
+
+.search-button-input {
+    width: 100px;
+    border-radius: 10px;
+    background-color: #f30745;
+    color: #FFFFFF;
+    font-size: 15px;
+    height: 40px;
+    margin-left: 5px;
 }
 
 .block-recommendations-about-film-model {
@@ -306,7 +316,7 @@ body {
     color: #FFFFFF;
 }
 
-.block-header-film-on-the-page-index i{
+.block-header-film-on-the-page-index i {
     padding-left: 10px;
     font-size: 17px;
 }
@@ -992,7 +1002,6 @@ body {
 
 // Код для блока комментария
 
-
 .block-for-writing-comment-see {
     margin-bottom: 30px;
 }
@@ -1177,6 +1186,12 @@ body {
     border-radius: 10px;
 }
 
+.error-label {
+    color: red;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 23px;
+}
 
 /// Код для регистрация
 
@@ -1238,4 +1253,114 @@ body {
     width: 400px;
     height: 30px;
     border-radius: 10px;
+}
+
+// Код для блока комментарии
+
+.block-under-comment {
+    margin: 2% auto;
+    width: 570px;
+}
+
+.block-comment-header {
+    width: 550px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #828187;
+}
+
+.block-comment-header h1 {
+    color: #FFFFFF;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.block-for-input-comment input {
+    margin-top: 30px;
+    height: 33px;
+    width: 410px;
+    border-radius: 11px;
+    outline: none;
+}
+
+.block-for-input-comment button {
+    margin-left: 4px;
+    background-color: #f30745;
+    color: #FFFFFF;
+    width: 110px;
+    height: 33px;
+    border-radius: 11px
+}
+
+.icon-user-comment {
+    color: #FFFFFF;
+    margin-right: 4px;
+    font-size: 18px;
+}
+
+.block-written-comments {
+    border-bottom: 1px solid #36353e;
+    padding-bottom: 20px;
+}
+
+.block-name-user-and-like-and-data-comment {
+    display: flex;
+}
+
+.block-letter-name-user-comment h1 {
+    color: #FFFFFF;
+    font-size: 11px;
+    background-color: #00a65a;
+    padding: 5px 8px 5px 8px;
+    border-radius: 6px;
+}
+
+.block-written-comments {
+    margin-top: 30px;
+}
+
+.block-user-name-comment-1 {
+    display: flex;
+    margin-left: 15px;
+    width: 470px;
+}
+
+.block-user-name-comment-1 p {
+    color: #a5a1b1;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 13px;
+}
+
+.block-user-name-comment-1 h5 {
+    color: #a5a1b1;
+    font-size: 14px;
+}
+
+.block-i-like-comment {
+    display: flex;
+}
+
+.block-i-like-comment i {
+    color: #a5a1b1;
+}
+
+.block-i-like-comment i:hover {
+    color: #FFFFFF;
+}
+
+.block-i-like-comment p {
+    color: #a5a1b1;
+    padding: 0 8px 0 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.block-comment-p-dont-know {
+    margin-left: 38px;
+}
+
+.block-comment-p-dont-know p {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold;
 }

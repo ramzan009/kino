@@ -1,13 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin;
+namespace App\Http\Requests;
 
-
-use App\Models\Country;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
-class CountryRequest extends FormRequest
+class UserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -29,10 +26,13 @@ class CountryRequest extends FormRequest
               'required',
               'string',
             ],
-            'alias' => [
+            'avatar' => [
+                'image',
+                'nullable',
+            ],
+            'email' => [
                 'required',
                 'string',
-                Rule::unique(Country::class, 'alias')->ignore($this->request->get('id')),
             ]
         ];
     }

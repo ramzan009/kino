@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 
-use App\Http\Requests\Admin\UserCreateRequest;
-use App\Http\Requests\Admin\UserRequest;
+use App\Http\Requests\UserCreateRequest;
+use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;

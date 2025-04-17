@@ -16,19 +16,31 @@
                 <div class="block-register-input">
                     <div class="block-register-input-1">
                         <p>Имя</p>
-                        <input name="name" type="text" placeholder="Введите имя...">
+                        @error('name')
+                        <label class="error-label" for="form2Example18">{{ $message }}</label>
+                        @enderror
+                        <input name="name" type="text" value="{{ old('name') }}" placeholder="Введите имя...">
                     </div>
                     <div class="block-register-input-1">
                         <p>Почта</p>
-                        <input name="email" type="email" placeholder="Введите Почта...">
+                        @error('email')
+                        <label class="error-label" for="form2Example18">{{ $message }}</label>
+                        @enderror
+                        <input name="email" type="email" value="{{ old('email') }}" placeholder="Введите Почта...">
                     </div>
                     <div class="block-register-input-1">
                         <p>Пароль</p>
-                        <input name="password" type="password" placeholder="Введите Пароль...">
+                        @error('password')
+                        <label class="error-label" for="form2Example18">{{ $message }}</label>
+                        @enderror
+                        <input name="password" type="password" value="{{ old('password') }}" placeholder="Введите Пароль...">
                     </div>
                     <div class="block-register-input-1">
                         <p>Подтвердите пароль</p>
-                        <input name="password_confirmation" type="password" placeholder="Введите пароль...">
+                        @error('password_confirmation')
+                        <label class="error-label" for="form2Example18">{{ $message }}</label>
+                        @enderror
+                        <input name="password_confirmation" type="password" value="{{ old('password_confirmation') }}" placeholder="Введите пароль...">
                     </div>
                     <a class="tag-back-register" href="{{ route('login') }}">На страницу вход</a>
                     <button type="submit" class="class-register-button">Регистрироваться</button>
