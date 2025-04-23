@@ -35,9 +35,9 @@
                         <div class="block-ul-film-information-2">
                             <ul>
                                 @foreach($film->genres as $genre)
-                                <li>{{ $genre->name }}</li>
+                                    <li>{{ $genre->name }}</li>
                                 @endforeach
-                                    <li>{{ $film->country->name }}</li>
+                                <li>{{ $film->country->name }}</li>
                             </ul>
                         </div>
                         <div class="block-ul-film-information-3">
@@ -154,7 +154,8 @@
                 </div>
                 <div class="block-film">
                     <div class="block-under-film">
-                        <a href="">
+                        @foreach($film_genres as $genre)
+                        <a href="{{ route('film', $genre->id) }}">
                             <div class="block-films">
                                 <div class="film">
                                     <div class="block-window">
@@ -187,253 +188,14 @@
                                     <img src="../img/thumbs.jpg">
                                 </div>
                                 <div class="title-film">
-                                    <p>Белорусский вокзал </p>
+                                    <p>{{ $genre->name }}</p>
                                 </div>
                                 <div class="text-p">
                                     <p>Подписка</p>
                                 </div>
                             </div>
                         </a>
-                        <a href="">
-                            <div class="block-films">
-                                <div class="film">
-                                    <div class="block-window">
-                                        <div class="block-under-window">
-                                            <div class="icons-window">
-                                                <div class="icons-window-bookmark">
-                                                    <i class="fa-regular fa-bookmark"></i>
-                                                </div>
-                                                <div class="icons-window-square">
-                                                    <i class="fa-regular fa-share-from-square"></i>
-                                                </div>
-                                                <div class="icons-window-star">
-                                                    <i class="fa-regular fa-star"></i>
-                                                </div>
-                                                <div class="icons-window-eye-slash">
-                                                    <i class="fa-solid fa-eye-slash"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="block-under-window-1">
-                                            <div class="block-window-information">
-                                                <h1>0,9</h1>
-                                                <span>1982</span>
-                                                <span>СССР</span><br>
-                                                <span>Драмы</span>
-                                                <h5>91 минут</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="../img/thumbs.jpg">
-                                </div>
-                                <div class="title-film">
-                                    <p>Белорусский вокзал </p>
-                                </div>
-                                <div class="text-p">
-                                    <p>Подписка</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="block-films">
-                                <div class="film">
-                                    <div class="block-window">
-                                        <div class="block-under-window">
-                                            <div class="icons-window">
-                                                <div class="icons-window-bookmark">
-                                                    <i class="fa-regular fa-bookmark"></i>
-                                                </div>
-                                                <div class="icons-window-square">
-                                                    <i class="fa-regular fa-share-from-square"></i>
-                                                </div>
-                                                <div class="icons-window-star">
-                                                    <i class="fa-regular fa-star"></i>
-                                                </div>
-                                                <div class="icons-window-eye-slash">
-                                                    <i class="fa-solid fa-eye-slash"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="block-under-window-1">
-                                            <div class="block-window-information">
-                                                <h1>0,9</h1>
-                                                <span>1982</span>
-                                                <span>СССР</span><br>
-                                                <span>Драмы</span>
-                                                <h5>91 минут</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="../img/thumbs.jpg">
-                                </div>
-                                <div class="title-film">
-                                    <p>Белорусский вокзал </p>
-                                </div>
-                                <div class="text-p">
-                                    <p>Подписка</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="block-films">
-                                <div class="film">
-                                    <div class="block-window">
-                                        <div class="block-under-window">
-                                            <div class="icons-window">
-                                                <div class="icons-window-bookmark">
-                                                    <i class="fa-regular fa-bookmark"></i>
-                                                </div>
-                                                <div class="icons-window-square">
-                                                    <i class="fa-regular fa-share-from-square"></i>
-                                                </div>
-                                                <div class="icons-window-star">
-                                                    <i class="fa-regular fa-star"></i>
-                                                </div>
-                                                <div class="icons-window-eye-slash">
-                                                    <i class="fa-solid fa-eye-slash"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="block-under-window-1">
-                                            <div class="block-window-information">
-                                                <h1>0,9</h1>
-                                                <span>1982</span>
-                                                <span>СССР</span><br>
-                                                <span>Драмы</span>
-                                                <h5>91 минут</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="../img/thumbs.jpg">
-                                </div>
-                                <div class="title-film">
-                                    <p>Белорусский вокзал </p>
-                                </div>
-                                <div class="text-p">
-                                    <p>Подписка</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="block-films">
-                                <div class="film">
-                                    <div class="block-window">
-                                        <div class="block-under-window">
-                                            <div class="icons-window">
-                                                <div class="icons-window-bookmark">
-                                                    <i class="fa-regular fa-bookmark"></i>
-                                                </div>
-                                                <div class="icons-window-square">
-                                                    <i class="fa-regular fa-share-from-square"></i>
-                                                </div>
-                                                <div class="icons-window-star">
-                                                    <i class="fa-regular fa-star"></i>
-                                                </div>
-                                                <div class="icons-window-eye-slash">
-                                                    <i class="fa-solid fa-eye-slash"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="block-under-window-1">
-                                            <div class="block-window-information">
-                                                <h1>0,9</h1>
-                                                <span>1982</span>
-                                                <span>СССР</span><br>
-                                                <span>Драмы</span>
-                                                <h5>91 минут</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="../img/thumbs.jpg">
-                                </div>
-                                <div class="title-film">
-                                    <p>Белорусский вокзал </p>
-                                </div>
-                                <div class="text-p">
-                                    <p>Подписка</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="block-films">
-                                <div class="film">
-                                    <div class="block-window">
-                                        <div class="block-under-window">
-                                            <div class="icons-window">
-                                                <div class="icons-window-bookmark">
-                                                    <i class="fa-regular fa-bookmark"></i>
-                                                </div>
-                                                <div class="icons-window-square">
-                                                    <i class="fa-regular fa-share-from-square"></i>
-                                                </div>
-                                                <div class="icons-window-star">
-                                                    <i class="fa-regular fa-star"></i>
-                                                </div>
-                                                <div class="icons-window-eye-slash">
-                                                    <i class="fa-solid fa-eye-slash"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="block-under-window-1">
-                                            <div class="block-window-information">
-                                                <h1>0,9</h1>
-                                                <span>1982</span>
-                                                <span>СССР</span><br>
-                                                <span>Драмы</span>
-                                                <h5>91 минут</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="../img/thumbs.jpg">
-                                </div>
-                                <div class="title-film">
-                                    <p>Белорусский вокзал </p>
-                                </div>
-                                <div class="text-p">
-                                    <p>Подписка</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="block-films">
-                                <div class="film">
-                                    <div class="block-window">
-                                        <div class="block-under-window">
-                                            <div class="icons-window">
-                                                <div class="icons-window-bookmark">
-                                                    <i class="fa-regular fa-bookmark"></i>
-                                                </div>
-                                                <div class="icons-window-square">
-                                                    <i class="fa-regular fa-share-from-square"></i>
-                                                </div>
-                                                <div class="icons-window-star">
-                                                    <i class="fa-regular fa-star"></i>
-                                                </div>
-                                                <div class="icons-window-eye-slash">
-                                                    <i class="fa-solid fa-eye-slash"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="block-under-window-1">
-                                            <div class="block-window-information">
-                                                <h1>0,9</h1>
-                                                <span>1982</span>
-                                                <span>СССР</span><br>
-                                                <span>Драмы</span>
-                                                <h5>91 минут</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <img src="../img/thumbs.jpg">
-                                </div>
-                                <div class="title-film">
-                                    <p>Белорусский вокзал </p>
-                                </div>
-                                <div class="text-p">
-                                    <p>Подписка</p>
-                                </div>
-                            </div>
-                        </a>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -443,32 +205,33 @@
                         <h1><a href="">Отзывы</a></h1>
                     </div>
                     <div class="block-for-title-comments-h1-2">
-                        <a href="{{ route('comment') }}">
+                        <a href="{{ route('comment', $film->id) }}">
                             <button>Оставить отзыв</button>
                         </a>
                     </div>
                 </div>
                 <p class="block-about-p-comment-film">о сериале «Тайфун»</p>
                 <div class="under-the-block-comment">
-                    <div class="block-comment-text-film">
-                        <div class="block-name-user-comment-film">
-                            <h1>Ruslan</h1>
-                        </div>
-                        <div class="block-text-film">
-                            Детский сад, за уши притянутый сюжет. Временами испытываешь испанский стыд за режиссера...
-                            Не тратьте время понапрасну.
-                        </div>
-                        <div class="block-datetime-comments-and-like">
-                            <div class="block-datetime-comment">
-                                <p>10 сентября</p>
+                    @foreach($film->comments as $comment)
+                        <div class="block-comment-text-film">
+                            <div class="block-name-user-comment-film">
+                                <h1>{{ $comment->user->name }}</h1>
                             </div>
-                            <div class="block-like-comment">
-                                <a href=""><i class="fa-regular fa-thumbs-up"></i></a>
-                                <p>4</p>
-                                <a href=""><i class="fa-regular fa-thumbs-down"></i></a>
+                            <div class="block-text-film">
+                                {{ $comment->comment }}
+                            </div>
+                            <div class="block-datetime-comments-and-like">
+                                <div class="block-datetime-comment">
+                                    <p>{{ $comment->created_at->translatedFormat('H F') }}</p>
+                                </div>
+                                <div class="block-like-comment">
+                                    <a href=""><i class="fa-regular fa-thumbs-up"></i></a>
+                                    <p>4</p>
+                                    <a href=""><i class="fa-regular fa-thumbs-down"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

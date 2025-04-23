@@ -1023,6 +1023,12 @@ body {
     border-bottom: 1px solid #FFFFFF;
 }
 
+
+.under-the-block-comment {
+    display: flex;
+    gap: 10px;
+}
+
 .block-for-title-comments-h1-2 button {
     color: #FFFFFF;
     font-size: 13px;
@@ -1037,7 +1043,6 @@ body {
 .block-for-title-comments-h1-2 button:hover {
     transform: scale(1.05);
 }
-
 
 .block-about-p-comment-film {
     color: #9c9ea2;

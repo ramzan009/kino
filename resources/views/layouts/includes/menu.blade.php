@@ -18,18 +18,25 @@
         <div class="under-block-menu-ul-icons-bell">
             <a href=""><i class="fa-regular fa-bell"></i></a>
         </div>
-        <div class="under-block-menu-ul-icons-user">
-            <a href="{{ route('login') }}"><i class="fa-regular fa-user"></i>Войти</a>
-        </div>
+        @auth()
+            <div class="under-block-menu-ul-icons-user">
+                <a href="{{ route('profile') }}"><i class="fa-regular fa-user"></i>{{ auth()->user()->name }}</a>
+            </div>
+        @endauth
+        @guest()
+            <div class="under-block-menu-ul-icons-user">
+                <a href="{{ route('login') }}"><i class="fa-regular fa-user"></i>Войти</a>
+            </div>
+        @endguest
     </div>
     <div class="model-for-menu">
         <i class="fa-solid fa-xmark icons-xmark"></i>
         <div class="block-under-model-menu-value">
-                <div class="block-model-input-header">
-                    <h1>Поиск</h1>
-                    <input class="input_model" name="search" placeholder="Фильмы, сериалы, жанры и персоны" type="text">
-                    <button class="search-button-input">Найти</button>
-                </div>
+            <div class="block-model-input-header">
+                <h1>Поиск</h1>
+                <input class="input_model" name="search" placeholder="Фильмы, сериалы, жанры и персоны" type="text">
+                <button class="search-button-input">Найти</button>
+            </div>
             <div class="input-h1-model-1">
                 <h1>Возможно, тебя заинтересует</h1>
             </div>

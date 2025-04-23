@@ -16,9 +16,16 @@ Route::get('/register', [RegisterController::class, 'register' ])->name('registe
 Route::post('/registration', [RegisterController::class, 'create' ])->name('registration_process');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login_process');
-Route::get('/comment', [CommentController::class, 'index'])->name('comment');
-Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
-Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile_edit');
 
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/film/{id}/comments', [CommentController::class, 'index'])->name('comment');
+    Route::post('/film/{id}/comment', [CommentController::class, 'store'])->name('comment_store');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile_edit');
+    Route::get('/profile/delete', [ProfileController::class, 'delete'])->name('profile_delete');
+    Route::put('/profile/update', [ProfileController::class, 'profileUpdate'])->name('profile_update');
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+});
 
 
