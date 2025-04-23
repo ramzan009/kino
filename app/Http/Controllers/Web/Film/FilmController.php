@@ -11,11 +11,21 @@ class FilmController extends Controller
     {
         $film = Film::query()
             ->with([
-                    'authors',
-                    'genres',
+                'authors',
+                'genres',
+                /**
+                 * это отношению, function доробатывает запрос.
+                 */
+                'comments' => function ($query) {
+                $query->limit(5);
+                }
             ])
             ->findOrFail($id);
-        return view('web.film.film', compact('film'));
+
+        $film_genres = Film::query()->where('id', '!=', $film->id)->whereHas('genres', function ($query) use ($film) {
+           $query->whereIn('id', $film->genres->pluck('id'));
+        })->get();
+        return view('web.film.film', compact('film', 'film_genres'));
     }
 }
 

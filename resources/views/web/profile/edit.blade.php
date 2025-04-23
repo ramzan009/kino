@@ -14,11 +14,11 @@
                                 <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
                                      class="rounded-circle" width="150">
                                 <div class="mt-3">
-                                    <h4>John Doe</h4>
-                                    <p class="text-secondary mb-1">Full Stack Developer</p>
-                                    <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                                    <button class="btn btn-primary block-profile-edit-button-delete">Удалить аккаунт
-                                    </button>
+                                    <h4>{{ $user->name }}</h4>
+                                    <p class="text-secondary mb-1">Полный стек разработчик</p>
+                                    <p class="text-muted font-size-sm">Сан-Франциско, Калифорния</p>
+                                    <a href="{{ route('profile_delete') }}" data-mdb-button-init data-mdb-ripple-init
+                                       class="btn btn-primary block-profile-edit-button-delete">Удалить аккаунт</a>
                                 </div>
                             </div>
                         </div>
@@ -97,60 +97,73 @@
                 <div class="col-md-7">
                     <div class="card mb-3">
 
+                        <form action="{{ route('profile_update') }}" method="POST">
+                            @method('PUT')
+                            @csrf
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Имя</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        @error('name')
+                                        <label class="error-label" for="form2Example18">{{ $message }}</label>
+                                        <hr>
+                                        @enderror
+                                        <input class="profile-edit-input" name="name" value="{{ $user->name }}"
+                                               type="text">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Почта</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        @error('email')
+                                        <label class="error-label" for="form2Example18">{{ $message }}</label>
+                                        <hr>
+                                        @enderror
+                                        <input class="profile-edit-input" name="email" value="{{ $user->email }}"
+                                               type="email">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Старый пароль</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <input class="profile-edit-input" name="old_password" type="password">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Новый пароль</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <input class="profile-edit-input" name="password" type="text">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="mb-0">Подтвердите пароль</h6>
+                                    </div>
+                                    <div class="col-sm-9 text-secondary">
+                                        <input class="profile-edit-input" name="password_confirmation" type="password">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-primary">Сохранить</button>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Имя</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <input class="profile-edit-input" name="name" type="text">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Почта</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <input class="profile-edit-input" name="email" type="email">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Старый пароль</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <input class="profile-edit-input" name="old_password" type="password">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Новый пароль</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <input class="profile-edit-input" name="password" type="text">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Подтвердите пароль</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <input class="profile-edit-input" name="password_confirmation" type="password">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <button class="btn btn-primary">Сохранить</button>
-                                </div>
-                            </div>
-                        </div>
-
+                        </form>
 
                     </div>
                     <div class="row gutters-sm">

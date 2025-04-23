@@ -32,4 +32,13 @@ class LoginController extends Controller
         }
         return redirect()->back()->withErrors(['message' => 'Не удалось войти в аккаунт. Пароль не совпадает']);
     }
+
+    /**
+     * Выход из аккаунта
+     */
+    public function logout()
+    {
+        auth()->logout();
+        return redirect()->route('main');
+    }
 }
